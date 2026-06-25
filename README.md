@@ -7,7 +7,7 @@ ESP32-based energy monitoring and load control project with local automation, BL
 This project collects power and environmental data from two loads:
 
 - Air conditioner via `PZEM-004T` (voltage, current, power, energy, frequency, power factor)
-- Light/bulb via `ACS712-30A` current sensor
+- Light/bulb via another `PZEM-004T` sensor (current, power, energy)
 
 It also reads:
 
@@ -31,15 +31,14 @@ The ESP32 stores preferences in LittleFS, provides BLE telematics, and uploads t
 
 ### Sensors and actuators
 
-- `ACS712-30A` for bulb current sensing
-- `PZEM-004T` for AC metering
+- `PZEM-004T` for AC metering 
 - `PZEM-004T` for bulb metering
 - `HC-SR501` PIR motion sensor
 - `LDR` ambient light sensor
 - `DHT11` temperature/humidity sensor
 - `16x2 I2C LCD` via `PCF8574`
-- LEDs for bulb and AC status
-- Buttons for bulb control, AC control, and function/factory reset
+- `LEDs` for bulb and AC status
+- `Buttons` for bulb control, AC control, and function/factory reset
 
 ### ESP32 wiring
 
